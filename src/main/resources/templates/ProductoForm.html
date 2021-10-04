@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+		<div class="container mt=4">
+			<div class="col-sm-6">
+				<form th:action="@{/guardarProducto}" th:object=${Producto} method="POST">
+				<div class="card">
+					<div class="card-header"></div>
+					<h2>Modulo Productos</h2>
+					<div class="card-body">	
+						<div class="form-group">
+							<label>CODIGO</label>
+							<input th:field="*{Codigo_Prod}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>NOMBRE</label>
+							<input th:field="*{Nombre_Prod}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>NIT</label>
+							<input th:field="*{Nit_Prov_Prod}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>PRECIOCOMPRA</label>
+							<input th:field="*{Precio_Compra}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>IVA</label>
+							<input th:field="*{IVA_prod}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>PRECIOVENTA</label>
+							<input th:field="*{Precio_Vta}" type="text" class="form-control" />
+						</div>
+					</div>
+					<div class="card-footer">
+						<input type="submit" value="Guardar" class="btn btn-success">
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+</body>
+</html>

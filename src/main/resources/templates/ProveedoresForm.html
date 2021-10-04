@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+		<div class="container mt=4">
+			<div class="col-sm-6">
+				<form th:action="@{/guardarProveedores}" th:object=${Proveedores} method="POST">
+				<div class="card">
+					<div class="card-header"></div>
+					<h2>Modulo Proveedores</h2>
+					<div class="card-body">
+						<div class="form-group">
+							<label>NIT</label>
+							<input th:field="*{Nit_Prov}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>NOMBRE</label>
+							<input th:field="*{Nombre_Prov}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>DIRECCION</label>
+							<input th:field="*{Direccion_Prov}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>TELEFONO</label>
+							<input th:field="*{Telefono_Prov}" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label>CIUDAD</label>
+							<input th:field="*{Ciudad_Prov}" type="text" class="form-control" />
+						</div>
+					</div>
+					<div class="card-footer">
+						<input type="submit" value="Guardar" class="btn btn-success">
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+</body>
+</html>

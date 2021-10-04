@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+		<div class="container mt=4">
+		<a th:href="@{/crearCliente}" class="btn btn-primary">Nuevo</a>
+			<table>
+				<thead>
+					<tr>
+						<th>CEDULA</th>
+						<th>NOMBRE</th>
+						<th>DIRECCION</th>
+						<th>TELEFONO</th>
+						<th>CORREO</th>
+						<th>ACCIONES</th>
+					</tr>
+				</thead>
+				<tbody>
+	  				<tr th:each="p:${Clientes}">
+						<td th:text="${p.Cedula_Cli}"></td> 
+						<td th:text="${p.Nombre_Cli}"></td>
+						<td th:text="${p.Direccion_Cli}"></td>
+						<td th:text="${p.Telefono_Cli}"></td>
+						<td th:text="${p.Correo_Cli}"></td>
+						<td>		
+						<a th:href="@{/editarCliente/}+${p.Cedula_Cli}"class="btn btn-warning" >Editar</a>
+						<a th:href="@{/eliminarCliente/}+${p.Cedula_Cli}"class="btn btn-danger">Eliminar</a>
+						</td>
+					</tr>
+				</tbody>
+			
+
+			</table>
+		</div>
+</body>
+</html>

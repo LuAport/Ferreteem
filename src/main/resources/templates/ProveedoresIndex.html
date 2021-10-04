@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+		<div class="container mt=4">
+		<a th:href="@{/crearProveedores}" class="btn btn-primary">Nuevo</a>
+			<table>
+				<thead>
+					<tr>
+						<th>NIT</th>
+						<th>NOMBRE</th>
+						<th>DIRECCION</th>
+						<th>TELEFONO</th>
+						<th>CIUDAD</th>
+						<th>ACCIONES</th>
+					</tr>
+				</thead>
+				<tbody>
+	  				<tr th:each="p:${Proveedores}">
+						<td th:text="${p.Nit_Prov}"></td> 
+						<td th:text="${p.Nombre_Prov}"></td>
+						<td th:text="${p.Direccion_Prov}"></td>
+						<td th:text="${p.Telefono_Prov}"></td>
+						<td th:text="${p.Ciudad_Prov}"></td>
+						<td>		
+						<a th:href="@{/editarProveedores/}+${p.Nit_Prov}"class="btn btn-warning" >Editar</a>
+						<a th:href="@{/eliminarProveedores/}+${p.Nit_Prov}"class="btn btn-danger">Eliminar</a>
+						</td>
+					</tr>
+				</tbody>
+			
+
+			</table>
+		</div>
+</body>
+</html>
