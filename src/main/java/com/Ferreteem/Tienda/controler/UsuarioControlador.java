@@ -73,20 +73,19 @@ public class UsuarioControlador {
 		if (valido) {
 			return "redirect:/listarUsuarios";
 		}else {
-			return "redirect:/?error=true";
+			return "redirect:/Index?error=true";
 		}
-				
+	}
+	
 	//}
 	//@GetMapping("/Menu")
 	//public String Mostrar Menu(){
 		//return"Menu";
 	//}
 	
-	//	
-	//{
-	//@GetMapping("Index")
-	//public String mostrarIndex() {
-		//return "Index";
+	@GetMapping("Index")
+	public String mostrarIndex() {
+		return "Index";
 	}
 
 }
