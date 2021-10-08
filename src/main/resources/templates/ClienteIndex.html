@@ -5,10 +5,21 @@
 <title>Insert title here</title>
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" th:href="@{/estilogeneral.css}">
 </head>
 <body>
+	<div id="menu">
+		<ul>
+			<li><a th:href="@{/listarUsuarios}">usuarios</a></li>
+			<li><a th:href="@{listarClientes}">clientes</a></li>
+			<li><a th:href="@{listarProveedores}">proveedores</a></li>
+			<li><a th:href="@{listarProducto}">productos</a></li>
+			<li><a href="">ventas</a></li>
+		</ul>	
+		
+	</div>
 		<div class="container mt=4">
-		<a th:href="@{/crearCliente}" class="btn btn-primary">Nuevo</a>
+		
 			<table>
 				<thead>
 					<tr>
@@ -28,9 +39,12 @@
 						<td th:text="${p.Telefono_Cli}"></td>
 						<td th:text="${p.Correo_Cli}"></td>
 						<td>		
-						<a th:href="@{/editarCliente/}+${p.Cedula_Cli}"class="btn btn-warning" >Editar</a>
-						<a th:href="@{/eliminarCliente/}+${p.Cedula_Cli}"class="btn btn-danger">Eliminar</a>
+						<a id="btn_editar" th:href="@{/editarCliente/}+${p.Cedula_Cli}"class="btn btn-warning" >Editar</a>
+						<a id="btn_eliminar" th:href="@{/eliminarCliente/}+${p.Cedula_Cli}"class="btn btn-danger">Eliminar</a>
 						</td>
+					</tr>
+					<tr>
+					<td colspan="6"><a id="btn_nuevo" th:href="@{/crearCliente}" class="btn btn-primary">Ingresar Nuevo Cliente</a></td>
 					</tr>
 				</tbody>
 			

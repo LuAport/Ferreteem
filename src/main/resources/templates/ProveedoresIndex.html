@@ -5,10 +5,22 @@
 <title>Insert title here</title>
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" th:href="@{/estilogeneral.css}">
 </head>
 <body>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a th:href="@{/listarUsuarios}">usuarios</a></li>
+			<li><a th:href="@{listarClientes}">clientes</a></li>
+			<li><a href="">proveedores</a></li>
+			<li><a th:href="@{listarProducto}">productos</a></li>
+			<li><a href="">ventas</a></li>
+		</ul>	
+		
+	</div>
 		<div class="container mt=4">
-		<a th:href="@{/crearProveedores}" class="btn btn-primary">Nuevo</a>
+		
 			<table>
 				<thead>
 					<tr>
@@ -28,9 +40,12 @@
 						<td th:text="${p.Telefono_Prov}"></td>
 						<td th:text="${p.Ciudad_Prov}"></td>
 						<td>		
-						<a th:href="@{/editarProveedores/}+${p.Nit_Prov}"class="btn btn-warning" >Editar</a>
-						<a th:href="@{/eliminarProveedores/}+${p.Nit_Prov}"class="btn btn-danger">Eliminar</a>
+						<a id="btn_editar" th:href="@{/editarProveedores/}+${p.Nit_Prov}"class="btn btn-warning" >Editar</a>
+						<a id="btn_eliminar" th:href="@{/eliminarProveedores/}+${p.Nit_Prov}"class="btn btn-danger">Eliminar</a>
 						</td>
+					</tr>
+					<tr>
+						<td colspan="6"><a id="btn_nuevo" th:href="@{/crearProveedores}" class="btn btn-primary">Ingresar Nuevo Proveedor</a></td>
 					</tr>
 				</tbody>
 			

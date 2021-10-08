@@ -1,0 +1,128 @@
+body{
+ 	height: 100%;
+    background-image: url(fondo-ferreteam.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+table
+{
+	background:white;
+	font-family:'Rockwell';
+	color:black;
+	
+	border-collapse:collapse;
+	border: solid 1px black;
+	text-align:center;
+	padding:0px 70px;
+	width:1000px;	
+	vertical-align:300px;
+	position:absolute;
+	left:10%;
+	margin-left:50px;
+	top:40%;
+	margin-top:0px;
+	
+}
+thead
+{
+	background:gray;
+	color:white;
+	text-align: center;
+	
+}
+tbody{
+	margin:10px;
+	background:white;
+	border: black 1px solid;
+	
+}
+tr:hover td{
+	background:#DFF616;
+}
+
+#menu{
+	margin:0px 10px;
+	padding: 0px 10px;
+	text-align:center;
+}
+ #menu ul{
+	list-style-type:none;
+	display: inline-block;
+	margin:110px;
+	padding:0px;
+}
+#menu ul li
+{
+	display: inline-block;
+	color:white;
+	padding:20px 40px;
+	font-size:20px;
+	font-family:'Rockwell';
+	
+}
+
+#menu ul li a
+{
+	color:white;
+	text-decoration:none;
+	display:block;
+	font-size:25px;
+	padding:8px;
+	font-family:'Rockwell';
+	
+}
+
+#menu ul li a:hover{
+	background-color:#DFF616;
+	
+}
+#btn_nuevo
+{
+	float: bottom;
+	background:white;
+	border: 2px;
+	border-color:black;
+	color:black;
+	font-family:'Rockwell';
+	background-color: none;
+	font-size:30px;	
+	padding: 6px  100px;
+}
+#btn_nuevo:hover
+{
+	background:#DFF616;	
+}
+
+#btn_editar
+{
+	background:white;
+	border: 2px;
+	border-color:black;
+	color:black;
+	font-family:'Rockwell';
+	background-color: none;
+	font-size:18px;	
+	padding: 6px  10px;
+}
+
+#btn_editar:hover{
+	background:#E7F18D;
+}
+
+#btn_eliminar
+{
+	background:white;
+	border: 2px;
+	border-color:black;
+	color:black;
+	font-family:'Rockwell';
+	background-color: none;
+	font-size:18px;	
+	padding: 6px  10px;
+}
+#btn_eliminar:hover{
+	background:#D40202;
+}

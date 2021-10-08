@@ -36,7 +36,7 @@ public class ProductoControlador {
 	@GetMapping("/crearProducto")
 	public String agregar(Model model)
 	{
-		model.addAttribute("Productoes", new Producto());
+		model.addAttribute("Producto", new Producto());
 		return "ProductoForm";
 	}
 	

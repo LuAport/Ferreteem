@@ -1,0 +1,51 @@
+body{
+ 	height: 100%;
+    background-image: url(fondo-ferreteam.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+form{
+	width:400px;
+	height:480px;
+	background:#7A7129;
+	border-radius:8px;
+	margin:80px 350px;
+	padding:10px 10px;
+	font-family:'Rockwell';
+	text-align:center;	
+}
+
+label{
+	color:white;
+	font-family:'Rockwell';	
+	
+}
+h2
+{
+	font-size:45px;
+	color:white;
+	border-radius:8px;
+}
+#btn_guardar
+{
+	border:black;
+	font-weight:300;
+	background:#55544A;
+	
+	border-radius:8px;
+}
+#btn_guardar:hover{
+	background:#7A7129;
+}
+
+#cardbody{
+	background:#8A876E;
+	border-radius:8px;
+}
+form-control
+{	
+	border:none;
+}
